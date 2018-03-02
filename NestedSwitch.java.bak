@@ -1,0 +1,41 @@
+import java.util.Scanner;
+class NestedSwitch
+{
+	public static void main(String[] args)
+	{
+		int year; 
+		char b;
+		Scanner scr= new Scanner(System.in);
+		System.out.println("enter the year");
+		year=scr.nextInt();
+		System.out.println("enter your branch");
+		b=scr.next().charAt(0);
+		switch(year)
+		{
+			case 1: System.out.println("normal studies");
+					break;
+			case 2: 
+				switch(b)
+				{	
+					case 'E': System.out.println("electronics");
+								break;
+					case 'M' : System.out.println("mechanical");
+								break;
+					case 'C' : System.out.println("computer");
+								break;
+					default : System.out.println("no branch is available");
+				}
+			case 3 : 
+				switch(b)
+				{
+					case 'E' : System.out.println("electronics and communciation");
+								break;
+					case 'M' : System.out.println("mechanical enginnering");
+								break;
+					case 'C' : System.out.println("computer science engineering");
+								break;
+					default : System.out.println("no branch is available");
+				}
+		}
+	}		
+}
